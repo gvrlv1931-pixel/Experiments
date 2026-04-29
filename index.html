@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Your Name</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ── NAV ─────────────────────────────────────────────────── -->
+  <header class="nav-header">
+    <nav class="nav container">
+      <a href="#hero" class="nav-logo">YN</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact" class="btn btn-sm">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ── HERO ────────────────────────────────────────────────── -->
+    <section id="hero" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hero-greeting">Hi, I'm</p>
+          <h1 class="hero-name">Your Name</h1>
+          <p class="hero-role">
+            <span class="role-cycle" id="roleCycle">Software Developer</span>
+          </p>
+          <p class="hero-tagline">
+            I build things that matter — clean code, thoughtful design,
+            and a constant drive to learn.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-outline">Get in Touch</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="avatar-ring">
+            <div class="avatar-placeholder">
+              <!-- Replace with <img src="your-photo.jpg" alt="Your Name" /> -->
+              <span>YN</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-hint" aria-label="Scroll down">
+        <div class="scroll-arrow"></div>
+      </a>
+    </section>
+
+    <!-- ── ABOUT ────────────────────────────────────────────────── -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+          <div class="about-body">
+            <!--
+              PERSONALISE: Replace the paragraphs below with your own story.
+              Keep the <p> tags — they handle spacing automatically.
+            -->
+            <p>
+              I'm a passionate developer with a love for building clean,
+              user-centred products. Whether it's architecting backend systems
+              or crafting pixel-perfect interfaces, I care deeply about the
+              craft.
+            </p>
+            <p>
+              Outside of work I enjoy contributing to open source, exploring
+              new technologies, and sharing what I learn through writing and
+              talks.
+            </p>
+          </div>
+          <ul class="about-facts">
+            <!--
+              PERSONALISE: Update each <li> with your own details.
+            -->
+            <li>
+              <span class="fact-label">Location</span>
+              <span class="fact-value">Your City, Country</span>
+            </li>
+            <li>
+              <span class="fact-label">Available for</span>
+              <span class="fact-value">Full-time · Freelance</span>
+            </li>
+            <li>
+              <span class="fact-label">Languages</span>
+              <span class="fact-value">English · Other</span>
+            </li>
+            <li>
+              <span class="fact-label">Interests</span>
+              <span class="fact-value">Open Source · Writing · Travel</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SKILLS ───────────────────────────────────────────────── -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Skills &amp; Technologies</h2>
+
+        <!--
+          PERSONALISE: Add / remove <li> items in each group.
+          To add a new category, duplicate a <div class="skill-group"> block.
+        -->
+        <div class="skills-grid" id="skillsGrid">
+
+          <div class="skill-group">
+            <h3 class="skill-group-title">Languages</h3>
+            <ul class="skill-list">
+              <li class="skill-chip">JavaScript</li>
+              <li class="skill-chip">TypeScript</li>
+              <li class="skill-chip">Python</li>
+              <li class="skill-chip">SQL</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group-title">Frontend</h3>
+            <ul class="skill-list">
+              <li class="skill-chip">React</li>
+              <li class="skill-chip">HTML &amp; CSS</li>
+              <li class="skill-chip">Tailwind CSS</li>
+              <li class="skill-chip">Next.js</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group-title">Backend</h3>
+            <ul class="skill-list">
+              <li class="skill-chip">Node.js</li>
+              <li class="skill-chip">Express</li>
+              <li class="skill-chip">REST APIs</li>
+              <li class="skill-chip">GraphQL</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3 class="skill-group-title">Tools &amp; Platforms</h3>
+            <ul class="skill-list">
+              <li class="skill-chip">Git &amp; GitHub</li>
+              <li class="skill-chip">Docker</li>
+              <li class="skill-chip">Linux</li>
+              <li class="skill-chip">CI/CD</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EXPERIENCE ───────────────────────────────────────────── -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-title">Work Experience</h2>
+
+        <!--
+          PERSONALISE: Duplicate an <article class="timeline-item"> for each role.
+          Most recent role should come first.
+        -->
+        <ol class="timeline" aria-label="Work history">
+
+          <li class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <article class="timeline-card">
+              <header class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Senior Developer</h3>
+                  <p class="timeline-company">Awesome Company · Full-time</p>
+                </div>
+                <time class="timeline-date">Jan 2023 — Present</time>
+              </header>
+              <ul class="timeline-bullets">
+                <li>Led a team of 4 to deliver a customer-facing dashboard used by 50 k+ users.</li>
+                <li>Reduced API response time by 40 % through query optimisation and caching.</li>
+                <li>Established code-review standards that halved production incidents.</li>
+              </ul>
+              <ul class="tag-list">
+                <li class="tag">React</li>
+                <li class="tag">Node.js</li>
+                <li class="tag">PostgreSQL</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <article class="timeline-card">
+              <header class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Junior Developer</h3>
+                  <p class="timeline-company">Startup Inc · Full-time</p>
+                </div>
+                <time class="timeline-date">Jun 2021 — Dec 2022</time>
+              </header>
+              <ul class="timeline-bullets">
+                <li>Built and maintained REST APIs consumed by both web and mobile clients.</li>
+                <li>Collaborated closely with design to implement accessible UI components.</li>
+                <li>Participated in on-call rotation and improved observability tooling.</li>
+              </ul>
+              <ul class="tag-list">
+                <li class="tag">Python</li>
+                <li class="tag">FastAPI</li>
+                <li class="tag">React</li>
+              </ul>
+            </article>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+    <!-- ── PROJECTS ─────────────────────────────────────────────── -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+
+        <!--
+          PERSONALISE: Duplicate a <article class="project-card"> for each project.
+          Set data-featured="true" on your top 3 to pin them; others appear below a fold.
+        -->
+        <div class="projects-grid" id="projectsGrid">
+
+          <article class="project-card" data-featured="true">
+            <div class="project-top">
+              <span class="project-icon" aria-hidden="true">&#128187;</span>
+              <div class="project-links">
+                <!-- Replace href values with real URLs -->
+                <a href="#" class="icon-link" aria-label="GitHub repository" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </a>
+                <a href="#" class="icon-link" aria-label="Live demo" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Project Alpha</h3>
+            <p class="project-desc">
+              A full-stack SaaS dashboard for tracking analytics in real time.
+              Built with a focus on performance and accessibility.
+            </p>
+            <ul class="tag-list">
+              <li class="tag">React</li>
+              <li class="tag">Node.js</li>
+              <li class="tag">PostgreSQL</li>
+            </ul>
+          </article>
+
+          <article class="project-card" data-featured="true">
+            <div class="project-top">
+              <span class="project-icon" aria-hidden="true">&#128640;</span>
+              <div class="project-links">
+                <a href="#" class="icon-link" aria-label="GitHub repository" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </a>
+                <a href="#" class="icon-link" aria-label="Live demo" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">CLI Toolbox</h3>
+            <p class="project-desc">
+              A collection of developer productivity scripts packaged as a
+              single cross-platform CLI. 500+ GitHub stars.
+            </p>
+            <ul class="tag-list">
+              <li class="tag">Python</li>
+              <li class="tag">Click</li>
+              <li class="tag">Open Source</li>
+            </ul>
+          </article>
+
+          <article class="project-card" data-featured="true">
+            <div class="project-top">
+              <span class="project-icon" aria-hidden="true">&#127760;</span>
+              <div class="project-links">
+                <a href="#" class="icon-link" aria-label="GitHub repository" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">GeoView</h3>
+            <p class="project-desc">
+              Interactive mapping tool built on top of WebGL.
+              Handles millions of data points at 60 fps.
+            </p>
+            <ul class="tag-list">
+              <li class="tag">TypeScript</li>
+              <li class="tag">WebGL</li>
+              <li class="tag">D3.js</li>
+            </ul>
+          </article>
+
+          <!--
+            MORE PROJECTS — add here with data-featured="false" and they
+            appear under the "Show more" toggle automatically.
+          -->
+
+        </div>
+
+        <div class="projects-toggle-wrap" id="projectsToggleWrap" style="display:none">
+          <button class="btn btn-outline" id="projectsToggle">Show more projects</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── EDUCATION ────────────────────────────────────────────── -->
+    <section id="education" class="section">
+      <div class="container edu-container">
+
+        <div class="edu-col">
+          <h2 class="section-title">Education</h2>
+
+          <!--
+            PERSONALISE: Duplicate an <article> for each qualification.
+          -->
+          <ol class="timeline" aria-label="Education history">
+
+            <li class="timeline-item">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <article class="timeline-card">
+                <header class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">BSc Computer Science</h3>
+                    <p class="timeline-company">University of Somewhere</p>
+                  </div>
+                  <time class="timeline-date">2017 — 2021</time>
+                </header>
+                <p class="timeline-note">First-class honours · Dissertation on distributed systems.</p>
+              </article>
+            </li>
+
+          </ol>
+        </div>
+
+        <div class="edu-col">
+          <h2 class="section-title">Certifications</h2>
+
+          <!--
+            PERSONALISE: Duplicate a <li class="cert-card"> for each cert.
+          -->
+          <ul class="cert-list" aria-label="Certifications">
+
+            <li class="cert-card">
+              <div class="cert-badge" aria-hidden="true">&#127942;</div>
+              <div class="cert-info">
+                <h3 class="cert-name">AWS Solutions Architect – Associate</h3>
+                <p class="cert-meta">Amazon Web Services · Issued Mar 2023 · Expires Mar 2026</p>
+              </div>
+            </li>
+
+            <li class="cert-card">
+              <div class="cert-badge" aria-hidden="true">&#127942;</div>
+              <div class="cert-info">
+                <h3 class="cert-name">Professional Scrum Master I</h3>
+                <p class="cert-meta">Scrum.org · Issued Jan 2022 · No expiry</p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── CONTACT ──────────────────────────────────────────────── -->
+    <section id="contact" class="section section-alt">
+      <div class="container contact-container">
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="contact-intro">
+          Whether you have a project in mind, a question, or just want to say
+          hello — my inbox is always open.
+        </p>
+
+        <div class="contact-grid">
+
+          <!-- Contact form -->
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Your message…" required></textarea>
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+            <!--
+              NOTE: Wire up a backend or service like Formspree / EmailJS to
+              make the form actually send emails. See script.js for the hook.
+            -->
+          </form>
+
+          <!-- Contact links -->
+          <ul class="contact-links" aria-label="Contact links">
+            <!--
+              PERSONALISE: Replace href values and labels with your real profiles.
+            -->
+            <li>
+              <a href="mailto:hello@yourname.dev" class="contact-link">
+                <span class="contact-link-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </span>
+                <div>
+                  <span class="contact-link-label">Email</span>
+                  <span class="contact-link-value">hello@yourname.dev</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/yourusername" class="contact-link" target="_blank" rel="noopener">
+                <span class="contact-link-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </span>
+                <div>
+                  <span class="contact-link-label">GitHub</span>
+                  <span class="contact-link-value">github.com/yourusername</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/yourusername" class="contact-link" target="_blank" rel="noopener">
+                <span class="contact-link-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </span>
+                <div>
+                  <span class="contact-link-label">LinkedIn</span>
+                  <span class="contact-link-value">linkedin.com/in/yourusername</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ───────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Your Name. Built with plain HTML, CSS &amp; JS.</p>
+      <a href="#hero" class="back-to-top" aria-label="Back to top">&#8679;</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
