@@ -28,9 +28,9 @@ navLinks.querySelectorAll('a').forEach(link => {
 /* ─── Hero role cycle ─────────────────────────────────────────── */
 // PERSONALISE: update this list with your own roles / taglines.
 const roles = [
-  'Software Developer',
-  'Full-Stack Engineer',
-  'Open Source Contributor',
+  'Systems Designer',
+  'Social Entrepreneur',
+  'Circular Economy Builder',
   'Problem Solver',
 ];
 
