@@ -142,11 +142,21 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 /* ─── Achievement ────────────────────────────────────────────────────── */
 
+.achievement-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #4ade80;
+  margin-top: var(--s2);
+  margin-bottom: 0.35rem;
+  opacity: 0.8;
+}
+
 .achievement-list {
   display: flex;
   flex-wrap: wrap;
   gap: var(--s1);
-  margin-top: var(--s2);
 }
 
 .achievement {
