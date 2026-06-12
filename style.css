@@ -140,6 +140,25 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   border: 1px solid rgba(108,99,255,0.2);
 }
 
+/* ─── Achievement ────────────────────────────────────────────────────── */
+
+.achievement-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1);
+  margin-top: var(--s2);
+}
+
+.achievement {
+  background: rgba(74, 222, 128, 0.12);
+  color: #4ade80;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid rgba(74, 222, 128, 0.2);
+}
+
 /* ─── Nav ─────────────────────────────────────────────────────── */
 .nav-header {
   position: fixed;
