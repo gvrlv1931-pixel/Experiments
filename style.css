@@ -13,6 +13,8 @@
   --c-text-muted:  #e2e5ec;
   --c-tag-bg:      rgba(108, 99, 255, 0.12);
   --c-tag-text:    #a8a0ff;
+  --c-achieve-bg:   rgba(74, 222, 128, 0.12);
+  --c-achieve-text: #4ade80;
 
   /* Typography */
   --font-sans: 'Inter', system-ui, sans-serif;
