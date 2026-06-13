@@ -9,7 +9,7 @@
   --c-accent:      #6c63ff;
   --c-accent-glow: rgba(108,99,255,0.25);
   --c-text:        #e2e8f0;
-  --c-text-muted:  #8b95a8;
+  --c-text-muted:  #a0abbe;
   --c-tag-bg:      rgba(108,99,255,0.12);
   --c-tag-text:    #a8a0ff;
 
@@ -312,8 +312,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--s6);
-  align-items: start;
+  align-items: stretch;
 }
+
+.about-body { display: flex; flex-direction: column; justify-content: center; }
 
 .about-body p { color: var(--c-text-muted); font-size: 1.05rem; }
 .about-body p + p { margin-top: var(--s2); }
@@ -345,8 +347,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 .stats-row {
   display: flex;
   flex-wrap: nowrap;
-  gap: var(--s4);
-  margin-top: var(--s4);
+  gap: var(--s6);
+  margin-top: var(--s6);
+  padding-top: var(--s6);
+  border-top: 1px solid var(--c-border);
 }
 
 .stat-item {
