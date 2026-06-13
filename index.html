@@ -24,6 +24,7 @@
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#education">Education</a></li>
+        <li><a href="#books">Books</a></li>
         <li><a href="#contact" class="btn btn-sm">Contact</a></li>
       </ul>
     </nav>
@@ -43,6 +44,16 @@
           <p class="hero-tagline">
             I build systems that matter — with people, planet, and purpose at heart.
           </p>
+
+          <div class="bio-expand-wrap">
+            <button class="bio-toggle btn btn-outline btn-sm" aria-expanded="false" aria-controls="bioParagraph">
+              A bit more about me &#8964;
+            </button>
+            <p class="bio-paragraph" id="bioParagraph" hidden>
+              I am a simple human on this wondrous Earth. I am the founder of StuffShare and an MSc International Human Resource Management student at Strathclyde Business School, with a BSc in Environmental Geoscience from the University of Edinburgh. What I care about is the climate crisis and the shift to a sustainable future. How I work on it is systems thinking, anchored in operations and management: looking at the bigger picture, asking what is missing from it, finding the leverage points, and building the processes and tools that remove that friction. I want to help build a reality where people are part of this incredible planetary ecosystem, living fulfilling lives together with other species in our one big shared home.
+            </p>
+          </div>
+
           <div class="hero-cta">
             <a href="#projects" class="btn btn-primary">View My Work</a>
             <a href="#contact" class="btn btn-outline">Get in Touch</a>
@@ -69,20 +80,30 @@
         <h2 class="section-title">About Me</h2>
         <div class="about-grid">
           <div class="about-body">
-            <!--
-              PERSONALISE: Replace the paragraphs below with your own story.
-              Keep the <p> tags — they handle spacing automatically.
-            -->
             <p>
-              I am a systems entrepreneur building circular economy infrastructure, 
-              with the people instincts of an HR professional, 
-              the rigour and curiosity of a scientist, 
+              I am a systems entrepreneur building circular economy infrastructure,
+              with the people instincts of an HR professional,
+              the rigour and curiosity of a scientist,
               and the care of someone who believes in the power of communities.
             </p>
             <p>
-              Outside of work I enjoy challenging my perspectives and ways of thinking. 
+              Outside of work I enjoy challenging my perspectives and ways of thinking.
               I enjoy exploring new cultures, backpacking, and occasional stand up and improv comedy.
             </p>
+            <div class="stats-row">
+              <div class="stat-item">
+                <span class="stat-number" data-target="87">0</span>
+                <span class="stat-label">people led</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="3">0</span>
+                <span class="stat-label">social ventures</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="4">0</span>
+                <span class="stat-label">years in ops</span>
+              </div>
+            </div>
           </div>
           <ul class="about-facts">
             <!--
@@ -172,13 +193,17 @@
           <li class="timeline-item">
             <div class="timeline-dot" aria-hidden="true"></div>
             <article class="timeline-card">
-              <header class="timeline-header">
+              <header class="timeline-header timeline-header-toggle" role="button" tabindex="0" aria-expanded="true">
                 <div>
                   <h3 class="timeline-role">People Partner</h3>
                   <p class="timeline-company">Travel Radar · Part time</p>
                 </div>
-                <time class="timeline-date">Oct 2025 — present</time>
+                <div class="timeline-header-right">
+                  <time class="timeline-date">Oct 2025 — present</time>
+                  <span class="collapse-chevron" aria-hidden="true">&#8964;</span>
+                </div>
               </header>
+              <div class="card-body collapsible-body">
               <ul class="timeline-bullets">
                 <li>Proactively monitored and drafted company policies to ensure compliance with UK employment law.</li>
                 <li>Proposed inclusive initiatives.</li>
@@ -189,54 +214,71 @@
                 <li class="tag">Employee Relations</li>
                 <li class="tag">Recruitment</li>
               </ul>
+              </div>
             </article>
           </li>
           
           <li class="timeline-item">
             <div class="timeline-dot" aria-hidden="true"></div>
             <article class="timeline-card">
-              <header class="timeline-header">
+              <header class="timeline-header timeline-header-toggle" role="button" tabindex="0" aria-expanded="true">
                 <div>
                   <h3 class="timeline-role">Shift Leader</h3>
                   <p class="timeline-company">Wetherspoon · Full-time</p>
                 </div>
-                <time class="timeline-date">June 2021 — July - 2025</time>
+                <div class="timeline-header-right">
+                  <time class="timeline-date">June 2021 — July 2025</time>
+                  <span class="collapse-chevron" aria-hidden="true">&#8964;</span>
+                </div>
               </header>
+              <div class="card-body collapsible-body">
               <ul class="timeline-bullets">
-                <li>Managed business operations across bar and kitchen, leading a team of 87 people</li>
-                <li>Worked closely with contractors and other stakeholders to ensure smooth business operations and efficient problem solving</li>
-                <li>Improved wasteflow systems increasing recycling efficiency</li>
-                <li>Streamlined communication processes </li>
-                <li>Improved fire safety compliance by proposing a simple solution for ensuring thoroough testing </li>
+                <li>Led a diverse team of 87 individuals</li>
+                <li>Collaborated with various stakeholders including contractors, neighbouring venues, other pubs, and police</li>
+                <li>Conducted staff recruitment and managed personnel file ensuring compliance with the law</li>
+                <li>Managed business operations from stock ordering to staff training and cash operations</li>
+                <li>Initiated and led several initiatives including recycling, task management, and staff board</li>
+                <li>Ensured smooth pub operations, proactively solved problems and deescalated issues, adapting to circumstances</li>
               </ul>
               <ul class="tag-list">
                 <li class="tag">Business Operations</li>
                 <li class="tag">Management</li>
                 <li class="tag">Compliance</li>
               </ul>
+              </div>
             </article>
           </li>
-          
+
           <li class="timeline-item">
             <div class="timeline-dot" aria-hidden="true"></div>
             <article class="timeline-card">
-              <header class="timeline-header">
+              <header class="timeline-header timeline-header-toggle" role="button" tabindex="0" aria-expanded="true">
                 <div>
                   <h3 class="timeline-role">Supervisor</h3>
                   <p class="timeline-company">Total Meltdown · Full-time</p>
                 </div>
-                <time class="timeline-date">August 2025</time>
+                <div class="timeline-header-right">
+                  <time class="timeline-date">August 2025</time>
+                  <span class="collapse-chevron" aria-hidden="true">&#8964;</span>
+                </div>
               </header>
+              <div class="card-body collapsible-body">
               <ul class="timeline-bullets">
-                <li>Managed business operations of a festival food stall, leading a team of 5</li>
-                <li>Created systems to ensure consistent task completion, clear shift allocation, and tip distribution </li>
-                <li>Ensured safety compliance</li>
+                <li>Built and streamlined digital systems for daily operations</li>
+                <li>Experimented with innovative approaches for social media management driving customer engagement</li>
+                <li>Quickly built rapport and supervised a diverse team of 6 individuals</li>
+                <li>Represented staff interests in negotiation matters</li>
+                <li>Built relationships with various stakeholders including venue managers, other vendors, and agency representatives</li>
+                <li>Ensured outstanding customer experience and thorough compliance with health and safety regulations</li>
+                <li>Collected data and analysed business trends through the use of pivot tables, chi-test, pearson coefficient, standard error, and t-tests</li>
               </ul>
               <ul class="tag-list">
                 <li class="tag">Business Operations</li>
+                <li class="tag">Data Analysis</li>
                 <li class="tag">Management</li>
                 <li class="tag">Compliance</li>
-              </ul>  
+              </ul>
+              </div>
             </article>
           </li>
 
@@ -398,12 +440,14 @@
         </div>
 
         <div class="edu-col">
-          <h2 class="section-title">Awards</h2>
+          <div class="awards-header">
+            <h2 class="section-title">Awards</h2>
+            <button class="btn btn-outline btn-sm awards-toggle" aria-expanded="false" aria-controls="awardsList">
+              Show Awards
+            </button>
+          </div>
 
-          <!--
-            PERSONALISE: Duplicate a <li class="cert-card"> for each cert.
-          -->
-          <ul class="cert-list" aria-label="Awards">
+          <ul class="cert-list cert-list-collapsible" id="awardsList" aria-label="Awards" hidden>
             
             <li class="cert-card">
               <div class="cert-badge" aria-hidden="true">&#127942;</div>
@@ -448,6 +492,63 @@
           </ul>
         </div>
 
+      </div>
+    </section>
+
+    <!-- ── BOOKS ─────────────────────────────────────────────────── -->
+    <section id="books" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Favourite Books</h2>
+        <p class="books-intro">A few books that have shaped how I think.</p>
+        <div class="books-grid">
+
+          <article class="book-card book-favourite">
+            <div class="book-spine" aria-hidden="true"></div>
+            <div class="book-content">
+              <div class="book-icon" aria-hidden="true">&#11088;</div>
+              <h3 class="book-title">Origin Story: A Big History of Everything</h3>
+              <p class="book-author">David Christian</p>
+              <span class="book-badge">All-time favourite</span>
+            </div>
+          </article>
+
+          <article class="book-card">
+            <div class="book-spine" aria-hidden="true"></div>
+            <div class="book-content">
+              <div class="book-icon" aria-hidden="true">&#128218;</div>
+              <h3 class="book-title">Doughnut Economics</h3>
+              <p class="book-author">Kate Raworth</p>
+            </div>
+          </article>
+
+          <article class="book-card">
+            <div class="book-spine" aria-hidden="true"></div>
+            <div class="book-content">
+              <div class="book-icon" aria-hidden="true">&#128218;</div>
+              <h3 class="book-title">The Cold Start Problem</h3>
+              <p class="book-author">Andrew Chen</p>
+            </div>
+          </article>
+
+          <article class="book-card">
+            <div class="book-spine" aria-hidden="true"></div>
+            <div class="book-content">
+              <div class="book-icon" aria-hidden="true">&#128218;</div>
+              <h3 class="book-title">What's Mine Is Yours</h3>
+              <p class="book-author">Rachel Botsman &amp; Roo Rogers</p>
+            </div>
+          </article>
+
+          <article class="book-card">
+            <div class="book-spine" aria-hidden="true"></div>
+            <div class="book-content">
+              <div class="book-icon" aria-hidden="true">&#128218;</div>
+              <h3 class="book-title">The Art of Quiet Influence</h3>
+              <p class="book-author">Jocelyn Davis</p>
+            </div>
+          </article>
+
+        </div>
       </div>
     </section>
 
