@@ -881,6 +881,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 .form-group textarea.invalid { border-color: #f87171; }
 
 .form-error { font-size: 0.8rem; color: #f87171; min-height: 1.1em; }
+.form-privacy { font-size: 0.78rem; color: var(--c-text-muted); opacity: 0.7; }
 .form-status { font-size: 0.9rem; min-height: 1.2em; }
 .form-status.success { color: #a8a0ff; }
 .form-status.error   { color: #f87171; }
