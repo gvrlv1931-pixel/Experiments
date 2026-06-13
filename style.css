@@ -288,18 +288,12 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 .bio-read-more:hover { opacity: 0.7; }
 
-.bio-read-more::after {
-  content: '';
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 5px solid currentColor;
+.bio-chevron {
   transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
-.bio-read-more[aria-expanded="true"]::after { transform: rotate(-180deg); }
+.bio-read-more[aria-expanded="true"] .bio-chevron { transform: rotate(-180deg); }
 
 .bio-text {
   max-height: 0;
@@ -446,6 +440,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-family: var(--font-mono);
   color: var(--c-accent);
   line-height: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 1px;
 }
 
 .stat-label {
@@ -771,25 +768,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   margin-bottom: var(--s6);
 }
 
-.books-shelf-wrap {
-  overflow-x: auto;
-  padding-bottom: var(--s4);
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
-  scrollbar-color: var(--c-border) transparent;
-}
-
-.books-shelf-wrap::-webkit-scrollbar { height: 4px; }
-.books-shelf-wrap::-webkit-scrollbar-track { background: transparent; }
-.books-shelf-wrap::-webkit-scrollbar-thumb { background: var(--c-border); border-radius: 2px; }
-
-.books-shelf {
-  display: flex;
-  gap: var(--s4);
-  padding-inline: max(1.5rem, calc((100vw - 1100px) / 2 + 1.5rem));
-  width: max-content;
-  padding-block: var(--s2);
-}
+/* (shelf styles moved to book marquee section) */
 
 .book-item {
   width: 130px;
@@ -817,19 +796,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
     inset -4px 0 8px rgba(0,0,0,0.25);
 }
 
-.book-item.book-favourite .book-cover-wrap {
-  box-shadow:
-    3px 3px 12px rgba(0,0,0,0.45),
-    inset -4px 0 8px rgba(0,0,0,0.25),
-    0 0 24px rgba(251,191,36,0.18);
-}
-
-.book-item.book-favourite:hover .book-cover-wrap {
-  box-shadow:
-    6px 20px 32px rgba(0,0,0,0.55),
-    inset -4px 0 8px rgba(0,0,0,0.25),
-    0 0 40px rgba(251,191,36,0.28);
-}
 
 .book-cover {
   width: 100%;
@@ -878,14 +844,84 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .book-fave-tag {
   margin-top: 5px;
   display: inline-block;
-  background: rgba(251,191,36,0.12);
-  color: #d4a017;
+  background: var(--c-tag-bg);
+  color: var(--c-tag-text);
   font-size: 0.68rem;
   font-weight: 600;
   padding: 0.15rem 0.5rem;
   border-radius: 999px;
-  border: 1px solid rgba(251,191,36,0.25);
+  border: 1px solid rgba(108,99,255,0.2);
   letter-spacing: 0.03em;
+}
+
+/* ─── Project expand button & details ────────────────────────── */
+.project-expand-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: var(--s2);
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  color: var(--c-accent);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: opacity var(--transition);
+}
+
+.project-expand-btn:hover { opacity: 0.7; }
+
+.project-expand-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.project-expand-btn[aria-expanded="true"] svg { transform: rotate(-180deg); }
+
+.project-details {
+  overflow: hidden;
+  max-height: 400px;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 1;
+}
+
+.project-details.collapsed {
+  max-height: 0;
+  opacity: 0;
+}
+
+/* ─── DOI link ────────────────────────────────────────────────── */
+.doi-link {
+  color: var(--c-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-size: 0.88em;
+  transition: opacity var(--transition);
+}
+.doi-link:hover { opacity: 0.75; }
+
+/* ─── Book marquee ────────────────────────────────────────────── */
+.books-shelf-wrap {
+  overflow: hidden;
+  padding-bottom: var(--s4);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+.books-shelf {
+  display: flex;
+  gap: var(--s4);
+  width: max-content;
+  padding-block: var(--s2);
+  animation: bookMarquee 28s linear infinite;
+}
+
+.books-shelf:hover { animation-play-state: paused; }
+
+@keyframes bookMarquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
 /* ─── Contact ─────────────────────────────────────────────────── */

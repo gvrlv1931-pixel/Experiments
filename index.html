@@ -46,7 +46,10 @@
           </p>
 
           <div class="bio-expand-wrap">
-            <button class="bio-read-more" aria-expanded="false">Read more about me</button>
+            <button class="bio-read-more" aria-expanded="false">
+              Read more about me
+              <svg class="bio-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
             <div class="bio-text">
               <p>
                 I am a simple human on this wondrous Earth. I am the founder of StuffShare and an
@@ -98,7 +101,7 @@
             </p>
             <div class="stats-row">
               <div class="stat-item">
-                <span class="stat-number" data-target="87">0</span>
+                <span class="stat-number" data-target="100" data-suffix="+">0</span>
                 <span class="stat-label">people led</span>
               </div>
               <div class="stat-item">
@@ -106,8 +109,12 @@
                 <span class="stat-label">social ventures</span>
               </div>
               <div class="stat-item">
-                <span class="stat-number" data-target="4">0</span>
+                <span class="stat-number" data-target="5" data-suffix="+">0</span>
                 <span class="stat-label">years in ops</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number" data-target="8">0</span>
+                <span class="stat-label">sites &amp; prototypes</span>
               </div>
             </div>
           </div>
@@ -193,12 +200,12 @@
                 </div>
                 <div class="timeline-header-right">
                   <time class="timeline-date">Oct 2025 — present</time>
-                  <button class="card-toggle-btn" aria-expanded="true" aria-label="Toggle details">
+                  <button class="card-toggle-btn" aria-expanded="false" aria-label="Toggle details">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="6 9 12 15 18 9"/></svg>
                   </button>
                 </div>
               </header>
-              <div class="collapsible-body">
+              <div class="collapsible-body collapsed">
                 <ul class="timeline-bullets">
                   <li>Proactively monitored and drafted company policies to ensure compliance with UK employment law</li>
                   <li>Proposed inclusive initiatives</li>
@@ -223,12 +230,12 @@
                 </div>
                 <div class="timeline-header-right">
                   <time class="timeline-date">June 2021 — July 2025</time>
-                  <button class="card-toggle-btn" aria-expanded="true" aria-label="Toggle details">
+                  <button class="card-toggle-btn" aria-expanded="false" aria-label="Toggle details">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="6 9 12 15 18 9"/></svg>
                   </button>
                 </div>
               </header>
-              <div class="collapsible-body">
+              <div class="collapsible-body collapsed">
                 <ul class="timeline-bullets">
                   <li>Led a diverse team of 87 individuals</li>
                   <li>Collaborated with various stakeholders including contractors, neighbouring venues, other pubs, and police</li>
@@ -256,12 +263,12 @@
                 </div>
                 <div class="timeline-header-right">
                   <time class="timeline-date">August 2025</time>
-                  <button class="card-toggle-btn" aria-expanded="true" aria-label="Toggle details">
+                  <button class="card-toggle-btn" aria-expanded="false" aria-label="Toggle details">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="6 9 12 15 18 9"/></svg>
                   </button>
                 </div>
               </header>
-              <div class="collapsible-body">
+              <div class="collapsible-body collapsed">
                 <ul class="timeline-bullets">
                   <li>Built and streamlined digital systems for daily operations</li>
                   <li>Experimented with innovative approaches for social media management driving customer engagement</li>
@@ -307,18 +314,24 @@
             <p class="project-desc">
               A digital platform that makes sharing and borrowing easier than buying.
             </p>
-            <ul class="tag-list">
-              <li class="tag">Prototype building</li>
-              <li class="tag">Recruitment</li>
-              <li class="tag">Entrepreneurship</li>
-              <li class="tag">Business case development</li>
-              <li class="tag">Partnership development</li>
-            </ul>
-            <p class="achievement-label">Achievements</p>
-            <ul class="achievement-list">
-              <li class="achievement">Selected for Converge Kickstart Challenge</li>
-              <li class="achievement">Passed the first stage of Santander X Awards</li>
-            </ul>
+            <button class="project-expand-btn" aria-expanded="false">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="13" height="13"><polyline points="6 9 12 15 18 9"/></svg>
+              Details
+            </button>
+            <div class="project-details collapsed">
+              <ul class="tag-list">
+                <li class="tag">Prototype building</li>
+                <li class="tag">Recruitment</li>
+                <li class="tag">Entrepreneurship</li>
+                <li class="tag">Business case development</li>
+                <li class="tag">Partnership development</li>
+              </ul>
+              <p class="achievement-label">Achievements</p>
+              <ul class="achievement-list">
+                <li class="achievement">Selected for Converge Kickstart Challenge</li>
+                <li class="achievement">Passed the first stage of Santander X Awards</li>
+              </ul>
+            </div>
           </article>
 
           <article class="project-card" data-featured="true">
@@ -338,17 +351,23 @@
               A B2B platform connecting agricultural waste producers with buyers like biochar
               manufacturers and construction innovators, starting with India's crop burning problem.
             </p>
-            <ul class="tag-list">
-              <li class="tag">Prototype building</li>
-              <li class="tag">Vibe coding</li>
-              <li class="tag">Innovation theory</li>
-              <li class="tag">Market analysis</li>
-              <li class="tag">Pitching</li>
-            </ul>
-            <p class="achievement-label">Achievements</p>
-            <ul class="achievement-list">
-              <li class="achievement">85% grade</li>
-            </ul>
+            <button class="project-expand-btn" aria-expanded="false">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="13" height="13"><polyline points="6 9 12 15 18 9"/></svg>
+              Details
+            </button>
+            <div class="project-details collapsed">
+              <ul class="tag-list">
+                <li class="tag">Prototype building</li>
+                <li class="tag">Vibe coding</li>
+                <li class="tag">Innovation theory</li>
+                <li class="tag">Market analysis</li>
+                <li class="tag">Pitching</li>
+              </ul>
+              <p class="achievement-label">Achievements</p>
+              <ul class="achievement-list">
+                <li class="achievement">85% grade</li>
+              </ul>
+            </div>
           </article>
 
           <article class="project-card" data-featured="true">
@@ -365,15 +384,21 @@
               A Glasgow student support platform bringing housing, jobs, financial support,
               and local discounts into one place.
             </p>
-            <ul class="tag-list">
-              <li class="tag">Business Canvas Model</li>
-              <li class="tag">Innovation</li>
-              <li class="tag">Pitching</li>
-            </ul>
-            <p class="achievement-label">Achievements</p>
-            <ul class="achievement-list">
-              <li class="achievement">Won the EEC challenge and a £2000 prize</li>
-            </ul>
+            <button class="project-expand-btn" aria-expanded="false">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="13" height="13"><polyline points="6 9 12 15 18 9"/></svg>
+              Details
+            </button>
+            <div class="project-details collapsed">
+              <ul class="tag-list">
+                <li class="tag">Business Canvas Model</li>
+                <li class="tag">Innovation</li>
+                <li class="tag">Pitching</li>
+              </ul>
+              <p class="achievement-label">Achievements</p>
+              <ul class="achievement-list">
+                <li class="achievement">Won the EEC challenge and a £2000 prize</li>
+              </ul>
+            </div>
           </article>
 
         </div>
@@ -402,12 +427,12 @@
                   </div>
                   <div class="timeline-header-right">
                     <time class="timeline-date">2025 — 2026</time>
-                    <button class="card-toggle-btn" aria-expanded="true" aria-label="Toggle details">
+                    <button class="card-toggle-btn" aria-expanded="false" aria-label="Toggle details">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="6 9 12 15 18 9"/></svg>
                     </button>
                   </div>
                 </header>
-                <div class="collapsible-body">
+                <div class="collapsible-body collapsed">
                   <p class="timeline-note">Dissertation on the intersectionality of cultural factors influencing expatriation strategy in a tech start-up</p>
                   <div class="modules-wrap">
                     <button class="modules-toggle" aria-expanded="false">
@@ -440,13 +465,13 @@
                   </div>
                   <div class="timeline-header-right">
                     <time class="timeline-date">2020 — 2024</time>
-                    <button class="card-toggle-btn" aria-expanded="true" aria-label="Toggle details">
+                    <button class="card-toggle-btn" aria-expanded="false" aria-label="Toggle details">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="6 9 12 15 18 9"/></svg>
                     </button>
                   </div>
                 </header>
-                <div class="collapsible-body">
-                <p class="timeline-note">Second-class honours · Dissertation on the use of biochar in wastewater treatment.</p>
+                <div class="collapsible-body collapsed">
+                <p class="timeline-note">Second-class honours · Dissertation on the use of biochar in wastewater treatment — part of wider collaborative research. <a href="https://doi.org/10.48550/arXiv.2603.22144" class="doi-link" target="_blank" rel="noopener">arXiv:2603.22144</a></p>
                 <div class="modules-wrap">
                   <button class="modules-toggle" aria-expanded="false">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="6 9 12 15 18 9"/></svg>
@@ -546,18 +571,12 @@
         <h2 class="section-title">Recent Reads</h2>
         <p class="books-intro">A few books that have shaped how I think.</p>
       </div>
-      <div class="books-shelf-wrap">
-        <div class="books-shelf">
+      <div class="books-shelf-wrap" id="booksShelfWrap">
+        <div class="books-shelf" id="booksShelf">
 
-          <figure class="book-item book-favourite">
+          <figure class="book-item">
             <div class="book-cover-wrap">
-              <img
-                class="book-cover"
-                src="https://covers.openlibrary.org/b/isbn/9780316392051-M.jpg"
-                alt="Origin Story cover"
-                loading="lazy"
-                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
-              />
+              <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/9780316392051-M.jpg" alt="Origin Story cover" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
               <div class="book-cover-fallback" style="display:none">Origin Story</div>
             </div>
             <figcaption class="book-caption">
@@ -569,13 +588,7 @@
 
           <figure class="book-item">
             <div class="book-cover-wrap">
-              <img
-                class="book-cover"
-                src="https://covers.openlibrary.org/b/isbn/9781603587969-M.jpg"
-                alt="Doughnut Economics cover"
-                loading="lazy"
-                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
-              />
+              <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/9781603587969-M.jpg" alt="Doughnut Economics cover" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
               <div class="book-cover-fallback" style="display:none">Doughnut Economics</div>
             </div>
             <figcaption class="book-caption">
@@ -586,13 +599,7 @@
 
           <figure class="book-item">
             <div class="book-cover-wrap">
-              <img
-                class="book-cover"
-                src="https://covers.openlibrary.org/b/isbn/9780062969743-M.jpg"
-                alt="The Cold Start Problem cover"
-                loading="lazy"
-                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
-              />
+              <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/9780062969743-M.jpg" alt="The Cold Start Problem cover" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
               <div class="book-cover-fallback" style="display:none">The Cold Start Problem</div>
             </div>
             <figcaption class="book-caption">
@@ -603,13 +610,7 @@
 
           <figure class="book-item">
             <div class="book-cover-wrap">
-              <img
-                class="book-cover"
-                src="https://covers.openlibrary.org/b/isbn/9780061964749-M.jpg"
-                alt="What's Mine Is Yours cover"
-                loading="lazy"
-                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
-              />
+              <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/9780061964749-M.jpg" alt="What's Mine Is Yours cover" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
               <div class="book-cover-fallback" style="display:none">What's Mine Is Yours</div>
             </div>
             <figcaption class="book-caption">
@@ -620,13 +621,7 @@
 
           <figure class="book-item">
             <div class="book-cover-wrap">
-              <img
-                class="book-cover"
-                src="https://covers.openlibrary.org/b/isbn/9781473695085-M.jpg"
-                alt="The Art of Quiet Influence cover"
-                loading="lazy"
-                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
-              />
+              <img class="book-cover" src="https://covers.openlibrary.org/b/isbn/9781473695085-M.jpg" alt="The Art of Quiet Influence cover" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
               <div class="book-cover-fallback" style="display:none">The Art of Quiet Influence</div>
             </div>
             <figcaption class="book-caption">

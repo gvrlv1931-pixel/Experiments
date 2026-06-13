@@ -100,13 +100,14 @@ if (awardsToggle && awardsList) {
 /* ─── Stat counters ───────────────────────────────────────────── */
 function animateCounter(el, target, duration) {
   const d = duration || 1400;
+  const suffix = el.dataset.suffix || '';
   const start = performance.now();
   function step(now) {
     const p = Math.min((now - start) / d, 1);
     const eased = 1 - Math.pow(1 - p, 3);
-    el.textContent = Math.round(eased * target);
+    el.textContent = Math.round(eased * target) + suffix;
     if (p < 1) requestAnimationFrame(step);
-    else el.textContent = target;
+    else el.textContent = target + suffix;
   }
   requestAnimationFrame(step);
 }
@@ -231,6 +232,23 @@ contactForm.querySelectorAll('input, textarea').forEach(el => {
     formStatus.className = 'form-status';
   });
 });
+
+/* ─── Project expand/collapse ─────────────────────────────────── */
+document.querySelectorAll('.project-expand-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const details = btn.nextElementSibling;
+    const isOpen = !details.classList.contains('collapsed');
+    details.classList.toggle('collapsed', isOpen);
+    btn.setAttribute('aria-expanded', String(!isOpen));
+    btn.firstElementChild.style.transform = isOpen ? '' : 'rotate(-180deg)';
+  });
+});
+
+/* ─── Book shelf marquee ──────────────────────────────────────── */
+const booksShelf = document.getElementById('booksShelf');
+if (booksShelf) {
+  booksShelf.innerHTML += booksShelf.innerHTML;
+}
 
 /* ─── Modules toggle (education) ─────────────────────────────── */
 document.querySelectorAll('.modules-toggle').forEach(btn => {
