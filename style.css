@@ -353,7 +353,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 .stat-item {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   flex-shrink: 0;
   opacity: 0;
   transform: translateY(10px);
@@ -668,11 +668,24 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   gap: var(--s2);
   overflow: hidden;
   max-height: 2000px;
-  opacity: 1;
-  transition: max-height 0.55s ease, opacity 0.4s ease;
+  transition: max-height 0.6s ease;
 }
 
-.cert-list.collapsed { max-height: 0; opacity: 0; }
+.cert-list.collapsed { max-height: 0; }
+
+/* Staggered entrance for each card when list opens */
+.cert-list .cert-card {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease, border-color var(--transition);
+}
+
+.cert-list:not(.collapsed) .cert-card { opacity: 1; transform: translateY(0); }
+.cert-list:not(.collapsed) .cert-card:nth-child(1) { transition-delay: 0.08s; }
+.cert-list:not(.collapsed) .cert-card:nth-child(2) { transition-delay: 0.16s; }
+.cert-list:not(.collapsed) .cert-card:nth-child(3) { transition-delay: 0.24s; }
+.cert-list:not(.collapsed) .cert-card:nth-child(4) { transition-delay: 0.32s; }
+.cert-list:not(.collapsed) .cert-card:nth-child(5) { transition-delay: 0.40s; }
 
 .cert-card {
   display: flex;
