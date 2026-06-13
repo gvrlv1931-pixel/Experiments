@@ -204,12 +204,22 @@ if (contactForm && formStatus) {
     btn.disabled = true;
     btn.textContent = 'Sending…';
     try {
-      await new Promise(r => setTimeout(r, 900));
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: 'YOUR_WEB3FORMS_ACCESS_KEY',
+          name:    document.getElementById('name').value,
+          email:   document.getElementById('email').value,
+          message: document.getElementById('message').value,
+        }),
+      });
+      if (!res.ok) throw new Error();
       formStatus.textContent = "Message sent! I'll get back to you soon.";
       formStatus.className = 'form-status success';
       contactForm.reset();
     } catch {
-      formStatus.textContent = 'Something went wrong. Please try emailing directly.';
+      formStatus.textContent = 'Something went wrong. Please try again or reach out on LinkedIn.';
       formStatus.className = 'form-status error';
     } finally {
       btn.disabled = false;
