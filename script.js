@@ -26,7 +26,6 @@ navLinks.querySelectorAll('a').forEach(link => {
 });
 
 /* ─── Hero role cycle ─────────────────────────────────────────── */
-// PERSONALISE: update this list with your own roles / taglines.
 const roles = [
   'Systems Designer',
   'Social Entrepreneur',
@@ -41,7 +40,6 @@ let deleting = false;
 
 function typeRole() {
   const current = roles[roleIndex];
-
   if (!deleting) {
     roleCycle.textContent = current.slice(0, ++charIndex);
     if (charIndex === current.length) {
@@ -64,6 +62,69 @@ function typeRole() {
 
 setTimeout(typeRole, 800);
 
+/* ─── Bio expand/collapse ─────────────────────────────────────── */
+const bioBtn  = document.querySelector('.bio-read-more');
+const bioText = document.querySelector('.bio-text');
+
+if (bioBtn && bioText) {
+  bioBtn.addEventListener('click', () => {
+    const isOpen = bioText.classList.toggle('open');
+    bioBtn.setAttribute('aria-expanded', String(isOpen));
+  });
+}
+
+/* ─── Collapsible experience cards ───────────────────────────── */
+document.querySelectorAll('.card-toggle-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const card = btn.closest('.timeline-card');
+    const body = card.querySelector('.collapsible-body');
+    const isOpen = !body.classList.contains('collapsed');
+    body.classList.toggle('collapsed', isOpen);
+    btn.setAttribute('aria-expanded', String(!isOpen));
+  });
+});
+
+/* ─── Awards toggle ───────────────────────────────────────────── */
+const awardsToggle = document.querySelector('.awards-toggle');
+const awardsList   = document.getElementById('awardsList');
+
+if (awardsToggle && awardsList) {
+  awardsToggle.addEventListener('click', () => {
+    const isOpen = !awardsList.classList.contains('collapsed');
+    awardsList.classList.toggle('collapsed', isOpen);
+    awardsToggle.setAttribute('aria-expanded', String(!isOpen));
+    awardsToggle.textContent = isOpen ? 'Show Awards' : 'Hide Awards';
+  });
+}
+
+/* ─── Stat counters ───────────────────────────────────────────── */
+function animateCounter(el, target, duration) {
+  const d = duration || 1400;
+  const start = performance.now();
+  function step(now) {
+    const p = Math.min((now - start) / d, 1);
+    const eased = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(eased * target);
+    if (p < 1) requestAnimationFrame(step);
+    else el.textContent = target;
+  }
+  requestAnimationFrame(step);
+}
+
+const statsRow = document.querySelector('.stats-row');
+if (statsRow) {
+  const so = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      so.disconnect();
+      statsRow.classList.add('counting');
+      statsRow.querySelectorAll('.stat-number[data-target]').forEach((el, i) => {
+        setTimeout(() => animateCounter(el, parseInt(el.dataset.target, 10)), i * 160 + 120);
+      });
+    }
+  }, { threshold: 0.5 });
+  so.observe(statsRow);
+}
+
 /* ─── Scroll-reveal ───────────────────────────────────────────── */
 const revealObserver = new IntersectionObserver(
   (entries) => {
@@ -85,13 +146,12 @@ function initReveal() {
     '.cert-card',
     '.about-facts',
     '.about-body',
-    '.book-card',
-    '.stat-item',
+    '.book-item',
   ].join(', ');
 
   document.querySelectorAll(targets).forEach((el, i) => {
     el.classList.add('reveal');
-    el.style.transitionDelay = `${(i % 4) * 60}ms`;
+    el.style.transitionDelay = (i % 4) * 60 + 'ms';
     revealObserver.observe(el);
   });
 }
@@ -99,22 +159,18 @@ function initReveal() {
 initReveal();
 
 /* ─── Projects "show more" toggle ────────────────────────────── */
-const extraCards  = document.querySelectorAll('.project-card[data-featured="false"]');
-const toggleWrap  = document.getElementById('projectsToggleWrap');
-const toggleBtn   = document.getElementById('projectsToggle');
+const extraCards = document.querySelectorAll('.project-card[data-featured="false"]');
+const toggleWrap = document.getElementById('projectsToggleWrap');
+const toggleBtn  = document.getElementById('projectsToggle');
 
 if (extraCards.length > 0) {
   toggleWrap.style.display = 'block';
   let shown = false;
-
   toggleBtn.addEventListener('click', () => {
     shown = !shown;
     extraCards.forEach(card => {
       card.classList.toggle('visible', shown);
-      if (shown) {
-        // Trigger reveal animation for newly visible cards
-        setTimeout(() => revealObserver.observe(card), 10);
-      }
+      if (shown) setTimeout(() => revealObserver.observe(card), 10);
     });
     toggleBtn.textContent = shown ? 'Show fewer projects' : 'Show more projects';
   });
@@ -131,38 +187,16 @@ contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   if (!validateForm()) return;
 
-  const data = Object.fromEntries(new FormData(contactForm));
-
-  /*
-   * PERSONALISE: Replace the block below with your preferred sending
-   * mechanism, for example:
-   *
-   *   Formspree:
-   *     fetch('https://formspree.io/f/YOUR_ID', { method:'POST',
-   *       headers:{'Content-Type':'application/json'}, body:JSON.stringify(data) })
-   *
-   *   EmailJS:
-   *     emailjs.send('SERVICE_ID', 'TEMPLATE_ID', data)
-   *
-   * The current code just simulates a successful send for demo purposes.
-   */
   const submitBtn = contactForm.querySelector('[type="submit"]');
   submitBtn.disabled = true;
   submitBtn.textContent = 'Sending…';
 
   try {
-    // ── swap this fetch for your real endpoint ──
-    await new Promise(resolve => setTimeout(resolve, 900)); // demo delay
-    // await fetch('https://formspree.io/f/YOUR_ID', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(data),
-    // });
-
-    formStatus.textContent = 'Message sent! I\'ll get back to you soon.';
+    await new Promise(resolve => setTimeout(resolve, 900));
+    formStatus.textContent = "Message sent! I'll get back to you soon.";
     formStatus.className = 'form-status success';
     contactForm.reset();
-  } catch {
+  } catch (_) {
     formStatus.textContent = 'Something went wrong. Please try emailing directly.';
     formStatus.className = 'form-status error';
   } finally {
@@ -173,13 +207,11 @@ contactForm.addEventListener('submit', async (e) => {
 
 function validateForm() {
   let valid = true;
-
   const rules = [
-    { id: 'name',    msg: 'Please enter your name.',          test: v => v.trim().length >= 2 },
-    { id: 'email',   msg: 'Please enter a valid email.',      test: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) },
+    { id: 'name',    msg: 'Please enter your name.',            test: v => v.trim().length >= 2 },
+    { id: 'email',   msg: 'Please enter a valid email.',        test: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) },
     { id: 'message', msg: 'Message must be at least 10 chars.', test: v => v.trim().length >= 10 },
   ];
-
   rules.forEach(({ id, msg, test }) => {
     const field = document.getElementById(id);
     const error = field.nextElementSibling;
@@ -188,11 +220,9 @@ function validateForm() {
     error.textContent = ok ? '' : msg;
     if (!ok) valid = false;
   });
-
   return valid;
 }
 
-// Clear error state on input
 contactForm.querySelectorAll('input, textarea').forEach(el => {
   el.addEventListener('input', () => {
     el.classList.remove('invalid');
@@ -202,84 +232,19 @@ contactForm.querySelectorAll('input, textarea').forEach(el => {
   });
 });
 
-/* ─── Bio expand/collapse ─────────────────────────────────────── */
-const bioToggle = document.querySelector('.bio-toggle');
-const bioParagraph = document.getElementById('bioParagraph');
-
-if (bioToggle && bioParagraph) {
-  bioToggle.addEventListener('click', () => {
-    const expanded = bioToggle.getAttribute('aria-expanded') === 'true';
-    bioToggle.setAttribute('aria-expanded', String(!expanded));
-    if (expanded) {
-      bioParagraph.hidden = true;
-      bioToggle.textContent = 'A bit more about me \u{2964}';
-    } else {
-      bioParagraph.hidden = false;
-      bioToggle.textContent = 'Close \u{2963}';
-    }
+/* ─── Modules toggle (education) ─────────────────────────────── */
+document.querySelectorAll('.modules-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const list = btn.nextElementSibling;
+    const isOpen = !list.classList.contains('collapsed');
+    list.classList.toggle('collapsed', isOpen);
+    btn.setAttribute('aria-expanded', String(!isOpen));
+    btn.classList.toggle('open', !isOpen);
   });
-}
-
-/* ─── Collapsible timeline cards ─────────────────────────────── */
-document.querySelectorAll('.timeline-header-toggle').forEach(header => {
-  function toggleCard() {
-    const card = header.closest('.timeline-card');
-    const body = card.querySelector('.collapsible-body');
-    const expanded = header.getAttribute('aria-expanded') === 'true';
-    header.setAttribute('aria-expanded', String(!expanded));
-    card.classList.toggle('card-collapsed', expanded);
-    body.classList.toggle('collapsed', expanded);
-  }
-
-  header.addEventListener('click', toggleCard);
-  header.addEventListener('keydown', e => {
-    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleCard(); }
-  });
-});
-
-/* ─── Awards toggle ───────────────────────────────────────────── */
-const awardsToggle = document.querySelector('.awards-toggle');
-const awardsList   = document.getElementById('awardsList');
-
-if (awardsToggle && awardsList) {
-  awardsToggle.addEventListener('click', () => {
-    const expanded = awardsToggle.getAttribute('aria-expanded') === 'true';
-    awardsToggle.setAttribute('aria-expanded', String(!expanded));
-    awardsList.hidden = expanded;
-    awardsToggle.textContent = expanded ? 'Show Awards' : 'Hide Awards';
-  });
-}
-
-/* ─── Animated stat counters ──────────────────────────────────── */
-function animateCounter(el, target, duration = 1200) {
-  const start = performance.now();
-  function step(now) {
-    const progress = Math.min((now - start) / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
-    el.textContent = Math.round(eased * target);
-    if (progress < 1) requestAnimationFrame(step);
-    else el.textContent = target;
-  }
-  requestAnimationFrame(step);
-}
-
-const statsObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const el = entry.target;
-      const target = parseInt(el.dataset.target, 10);
-      animateCounter(el, target);
-      statsObserver.unobserve(el);
-    }
-  });
-}, { threshold: 0.5 });
-
-document.querySelectorAll('.stat-number[data-target]').forEach(el => {
-  statsObserver.observe(el);
 });
 
 /* ─── Active nav link on scroll ──────────────────────────────── */
-const sections = document.querySelectorAll('section[id]');
+const sections   = document.querySelectorAll('section[id]');
 const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
 
 const sectionObserver = new IntersectionObserver(
@@ -287,7 +252,7 @@ const sectionObserver = new IntersectionObserver(
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         navAnchors.forEach(a => {
-          a.classList.toggle('active', a.getAttribute('href') === `#${entry.target.id}`);
+          a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id);
         });
       }
     });

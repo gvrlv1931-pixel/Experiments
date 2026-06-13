@@ -24,7 +24,7 @@
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#education">Education</a></li>
-        <li><a href="#books">Books</a></li>
+        <li><a href="#books">Reads</a></li>
         <li><a href="#contact" class="btn btn-sm">Contact</a></li>
       </ul>
     </nav>
@@ -46,12 +46,20 @@
           </p>
 
           <div class="bio-expand-wrap">
-            <button class="bio-toggle btn btn-outline btn-sm" aria-expanded="false" aria-controls="bioParagraph">
-              A bit more about me &#8964;
-            </button>
-            <p class="bio-paragraph" id="bioParagraph" hidden>
-              I am a simple human on this wondrous Earth. I am the founder of StuffShare and an MSc International Human Resource Management student at Strathclyde Business School, with a BSc in Environmental Geoscience from the University of Edinburgh. What I care about is the climate crisis and the shift to a sustainable future. How I work on it is systems thinking, anchored in operations and management: looking at the bigger picture, asking what is missing from it, finding the leverage points, and building the processes and tools that remove that friction. I want to help build a reality where people are part of this incredible planetary ecosystem, living fulfilling lives together with other species in our one big shared home.
-            </p>
+            <button class="bio-read-more" aria-expanded="false">Read more about me</button>
+            <div class="bio-text">
+              <p>
+                I am a simple human on this wondrous Earth. I am the founder of StuffShare and an
+                MSc International Human Resource Management student at Strathclyde Business School,
+                with a BSc in Environmental Geoscience from the University of Edinburgh. What I care
+                about is the climate crisis and the shift to a sustainable future. How I work on it
+                is systems thinking, anchored in operations and management: looking at the bigger
+                picture, asking what is missing from it, finding the leverage points, and building
+                the processes and tools that remove that friction. I want to help build a reality
+                where people are part of this incredible planetary ecosystem, living fulfilling lives
+                together with other species in our one big shared home.
+              </p>
+            </div>
           </div>
 
           <div class="hero-cta">
@@ -62,9 +70,7 @@
         <div class="hero-visual" aria-hidden="true">
           <div class="avatar-ring">
             <div class="avatar-placeholder">
-              <img src="for git hub.jpg" alt="NG"/>
-              <!-- Replace with <img src="your-photo.jpg" alt="Your Name" /> -->
-              <!--span>NG</span>-->
+              <img src="for git hub.jpg" alt="Nastya Gavrilova"/>
             </div>
           </div>
         </div>
@@ -106,9 +112,6 @@
             </div>
           </div>
           <ul class="about-facts">
-            <!--
-              PERSONALISE: Update each <li> with your own details.
-            -->
             <li>
               <span class="fact-label">Location</span>
               <span class="fact-value">Glasgow, Scotland</span>
@@ -119,11 +122,11 @@
             </li>
             <li>
               <span class="fact-label">Languages</span>
-              <span class="fact-value">English · Italian · Russian  · Happy to learn more! </span>
+              <span class="fact-value">English · Italian · Russian · Happy to learn more!</span>
             </li>
             <li>
               <span class="fact-label">Interests</span>
-              <span class="fact-value"> Sustainability · Circular Economy · Redesigning Systems with People and Planet at Heart · Climate Tech · Intersectional Approaches · HR · Cross-cultural Communications </span>
+              <span class="fact-value">Sustainability · Circular Economy · Climate Tech · Intersectional Approaches · HR · Cross-cultural Communications</span>
             </li>
           </ul>
         </div>
@@ -134,11 +137,6 @@
     <section id="skills" class="section section-alt">
       <div class="container">
         <h2 class="section-title">Skills &amp; Technologies</h2>
-
-        <!--
-          PERSONALISE: Add / remove <li> items in each group.
-          To add a new category, duplicate a <div class="skill-group"> block.
-        -->
         <div class="skills-grid" id="skillsGrid">
 
           <div class="skill-group">
@@ -148,7 +146,7 @@
               <li class="skill-chip">GitHub</li>
               <li class="skill-chip">Microsoft 365</li>
               <li class="skill-chip">Claude Code</li>
-              <li class="skill-chip"> Python &amp HTML &amp CSS</li>
+              <li class="skill-chip">Python · HTML · CSS</li>
             </ul>
           </div>
 
@@ -168,10 +166,10 @@
             <h3 class="skill-group-title">Analytical Skills</h3>
             <ul class="skill-list">
               <li class="skill-chip">Systems Thinking</li>
-              <li class="skill-chip">Agile and Scrum Project Management</li>
+              <li class="skill-chip">Agile &amp; Scrum</li>
               <li class="skill-chip">STEEPLE</li>
               <li class="skill-chip">SWOT</li>
-              <li class="skill-chip">Processes Optimization</li>
+              <li class="skill-chip">Process Optimization</li>
             </ul>
           </div>
 
@@ -183,68 +181,34 @@
     <section id="experience" class="section">
       <div class="container">
         <h2 class="section-title">Work Experience</h2>
-
-        <!--
-          PERSONALISE: Duplicate an <article class="timeline-item"> for each role.
-          Most recent role should come first.
-        -->
         <ol class="timeline" aria-label="Work history">
 
           <li class="timeline-item">
             <div class="timeline-dot" aria-hidden="true"></div>
             <article class="timeline-card">
-              <header class="timeline-header timeline-header-toggle" role="button" tabindex="0" aria-expanded="true">
+              <header class="timeline-header">
                 <div>
                   <h3 class="timeline-role">People Partner</h3>
                   <p class="timeline-company">Travel Radar · Part time</p>
                 </div>
                 <div class="timeline-header-right">
                   <time class="timeline-date">Oct 2025 — present</time>
-                  <span class="collapse-chevron" aria-hidden="true">&#8964;</span>
+                  <button class="card-toggle-btn" aria-expanded="true" aria-label="Toggle details">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="6 9 12 15 18 9"/></svg>
+                  </button>
                 </div>
               </header>
-              <div class="card-body collapsible-body">
-              <ul class="timeline-bullets">
-                <li>Proactively monitored and drafted company policies to ensure compliance with UK employment law.</li>
-                <li>Proposed inclusive initiatives.</li>
-                <li>Conducted exit interviews, chaired a dismissal panel, conducted mock interviews, and supported recruitment operations.</li>
-              </ul>
-              <ul class="tag-list">
-                <li class="tag">Policies</li>
-                <li class="tag">Employee Relations</li>
-                <li class="tag">Recruitment</li>
-              </ul>
-              </div>
-            </article>
-          </li>
-          
-          <li class="timeline-item">
-            <div class="timeline-dot" aria-hidden="true"></div>
-            <article class="timeline-card">
-              <header class="timeline-header timeline-header-toggle" role="button" tabindex="0" aria-expanded="true">
-                <div>
-                  <h3 class="timeline-role">Shift Leader</h3>
-                  <p class="timeline-company">Wetherspoon · Full-time</p>
-                </div>
-                <div class="timeline-header-right">
-                  <time class="timeline-date">June 2021 — July 2025</time>
-                  <span class="collapse-chevron" aria-hidden="true">&#8964;</span>
-                </div>
-              </header>
-              <div class="card-body collapsible-body">
-              <ul class="timeline-bullets">
-                <li>Led a diverse team of 87 individuals</li>
-                <li>Collaborated with various stakeholders including contractors, neighbouring venues, other pubs, and police</li>
-                <li>Conducted staff recruitment and managed personnel file ensuring compliance with the law</li>
-                <li>Managed business operations from stock ordering to staff training and cash operations</li>
-                <li>Initiated and led several initiatives including recycling, task management, and staff board</li>
-                <li>Ensured smooth pub operations, proactively solved problems and deescalated issues, adapting to circumstances</li>
-              </ul>
-              <ul class="tag-list">
-                <li class="tag">Business Operations</li>
-                <li class="tag">Management</li>
-                <li class="tag">Compliance</li>
-              </ul>
+              <div class="collapsible-body">
+                <ul class="timeline-bullets">
+                  <li>Proactively monitored and drafted company policies to ensure compliance with UK employment law</li>
+                  <li>Proposed inclusive initiatives</li>
+                  <li>Conducted exit interviews, chaired a dismissal panel, conducted mock interviews, and supported recruitment operations</li>
+                </ul>
+                <ul class="tag-list">
+                  <li class="tag">Policies</li>
+                  <li class="tag">Employee Relations</li>
+                  <li class="tag">Recruitment</li>
+                </ul>
               </div>
             </article>
           </li>
@@ -252,32 +216,67 @@
           <li class="timeline-item">
             <div class="timeline-dot" aria-hidden="true"></div>
             <article class="timeline-card">
-              <header class="timeline-header timeline-header-toggle" role="button" tabindex="0" aria-expanded="true">
+              <header class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Shift Leader</h3>
+                  <p class="timeline-company">Wetherspoon · Full-time</p>
+                </div>
+                <div class="timeline-header-right">
+                  <time class="timeline-date">June 2021 — July 2025</time>
+                  <button class="card-toggle-btn" aria-expanded="true" aria-label="Toggle details">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="6 9 12 15 18 9"/></svg>
+                  </button>
+                </div>
+              </header>
+              <div class="collapsible-body">
+                <ul class="timeline-bullets">
+                  <li>Led a diverse team of 87 individuals</li>
+                  <li>Collaborated with various stakeholders including contractors, neighbouring venues, other pubs, and police</li>
+                  <li>Conducted staff recruitment and managed personnel file ensuring compliance with the law</li>
+                  <li>Managed business operations from stock ordering to staff training and cash operations</li>
+                  <li>Initiated and led several initiatives including recycling, task management, and staff board</li>
+                  <li>Ensured smooth pub operations, proactively solved problems and deescalated issues, adapting to circumstances</li>
+                </ul>
+                <ul class="tag-list">
+                  <li class="tag">Business Operations</li>
+                  <li class="tag">Management</li>
+                  <li class="tag">Compliance</li>
+                </ul>
+              </div>
+            </article>
+          </li>
+
+          <li class="timeline-item">
+            <div class="timeline-dot" aria-hidden="true"></div>
+            <article class="timeline-card">
+              <header class="timeline-header">
                 <div>
                   <h3 class="timeline-role">Supervisor</h3>
                   <p class="timeline-company">Total Meltdown · Full-time</p>
                 </div>
                 <div class="timeline-header-right">
                   <time class="timeline-date">August 2025</time>
-                  <span class="collapse-chevron" aria-hidden="true">&#8964;</span>
+                  <button class="card-toggle-btn" aria-expanded="true" aria-label="Toggle details">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="6 9 12 15 18 9"/></svg>
+                  </button>
                 </div>
               </header>
-              <div class="card-body collapsible-body">
-              <ul class="timeline-bullets">
-                <li>Built and streamlined digital systems for daily operations</li>
-                <li>Experimented with innovative approaches for social media management driving customer engagement</li>
-                <li>Quickly built rapport and supervised a diverse team of 6 individuals</li>
-                <li>Represented staff interests in negotiation matters</li>
-                <li>Built relationships with various stakeholders including venue managers, other vendors, and agency representatives</li>
-                <li>Ensured outstanding customer experience and thorough compliance with health and safety regulations</li>
-                <li>Collected data and analysed business trends through the use of pivot tables, chi-test, pearson coefficient, standard error, and t-tests</li>
-              </ul>
-              <ul class="tag-list">
-                <li class="tag">Business Operations</li>
-                <li class="tag">Data Analysis</li>
-                <li class="tag">Management</li>
-                <li class="tag">Compliance</li>
-              </ul>
+              <div class="collapsible-body">
+                <ul class="timeline-bullets">
+                  <li>Built and streamlined digital systems for daily operations</li>
+                  <li>Experimented with innovative approaches for social media management driving customer engagement</li>
+                  <li>Quickly built rapport and supervised a diverse team of 6 individuals</li>
+                  <li>Represented staff interests in negotiation matters</li>
+                  <li>Built relationships with various stakeholders including venue managers, other vendors, and agency representatives</li>
+                  <li>Ensured outstanding customer experience and thorough compliance with health and safety regulations</li>
+                  <li>Collected data and analysed business trends through the use of pivot tables, chi-test, Pearson coefficient, standard error, and t-tests</li>
+                </ul>
+                <ul class="tag-list">
+                  <li class="tag">Business Operations</li>
+                  <li class="tag">Data Analysis</li>
+                  <li class="tag">Management</li>
+                  <li class="tag">Compliance</li>
+                </ul>
               </div>
             </article>
           </li>
@@ -290,18 +289,12 @@
     <section id="projects" class="section section-alt">
       <div class="container">
         <h2 class="section-title">Social Entrepreneurship Projects</h2>
-
-        <!--
-          PERSONALISE: Duplicate a <article class="project-card"> for each project.
-          Set data-featured="true" on your top 3 to pin them; others appear below a fold.
-        -->
         <div class="projects-grid" id="projectsGrid">
 
           <article class="project-card" data-featured="true">
             <div class="project-top">
-              <span class="project-icon" aria-hidden="true">&#128187;</span>
+              <span class="project-label" aria-hidden="true">01</span>
               <div class="project-links">
-                <!-- Replace href values with real URLs -->
                 <a href="#" class="icon-link" aria-label="GitHub repository" target="_blank" rel="noopener">
                   <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
                 </a>
@@ -330,7 +323,7 @@
 
           <article class="project-card" data-featured="true">
             <div class="project-top">
-              <span class="project-icon" aria-hidden="true">&#128640;</span>
+              <span class="project-label" aria-hidden="true">02</span>
               <div class="project-links">
                 <a href="#" class="icon-link" aria-label="GitHub repository" target="_blank" rel="noopener">
                   <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
@@ -342,15 +335,14 @@
             </div>
             <h3 class="project-title">GleanHub</h3>
             <p class="project-desc">
-              A B2B platform connecting agricultural waste producers (farmers, cooperatives) 
-              with buyers like biochar manufacturers and construction innovators, starting with 
-              India's crop burning problem.
+              A B2B platform connecting agricultural waste producers with buyers like biochar
+              manufacturers and construction innovators, starting with India's crop burning problem.
             </p>
             <ul class="tag-list">
               <li class="tag">Prototype building</li>
               <li class="tag">Vibe coding</li>
-              <li class="tag">Innovation theory application</li>
-              <li class="tag"> Market analysis</li>
+              <li class="tag">Innovation theory</li>
+              <li class="tag">Market analysis</li>
               <li class="tag">Pitching</li>
             </ul>
             <p class="achievement-label">Achievements</p>
@@ -361,7 +353,7 @@
 
           <article class="project-card" data-featured="true">
             <div class="project-top">
-              <span class="project-icon" aria-hidden="true">&#127760;</span>
+              <span class="project-label" aria-hidden="true">03</span>
               <div class="project-links">
                 <a href="#" class="icon-link" aria-label="GitHub repository" target="_blank" rel="noopener">
                   <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
@@ -370,8 +362,8 @@
             </div>
             <h3 class="project-title">ClydeCash</h3>
             <p class="project-desc">
-              ClydeCash is a Glasgow student support platform that brings housing, jobs, financial support, 
-              and local discounts into one place so students can find help without doing all the legwork themselves.
+              A Glasgow student support platform bringing housing, jobs, financial support,
+              and local discounts into one place.
             </p>
             <ul class="tag-list">
               <li class="tag">Business Canvas Model</li>
@@ -383,11 +375,6 @@
               <li class="achievement">Won the EEC challenge and a £2000 prize</li>
             </ul>
           </article>
-
-          <!--
-            MORE PROJECTS — add here with data-featured="false" and they
-            appear under the "Show more" toggle automatically.
-          -->
 
         </div>
 
@@ -403,11 +390,8 @@
 
         <div class="edu-col">
           <h2 class="section-title">Education</h2>
-
-          <!--
-            PERSONALISE: Duplicate an <article> for each qualification.
-          -->
           <ol class="timeline" aria-label="Education history">
+
             <li class="timeline-item">
               <div class="timeline-dot" aria-hidden="true"></div>
               <article class="timeline-card">
@@ -416,12 +400,36 @@
                     <h3 class="timeline-role">MSc International Human Resource Management</h3>
                     <p class="timeline-company">University of Strathclyde</p>
                   </div>
-                  <time class="timeline-date">2025 — 2026</time>
+                  <div class="timeline-header-right">
+                    <time class="timeline-date">2025 — 2026</time>
+                    <button class="card-toggle-btn" aria-expanded="true" aria-label="Toggle details">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                  </div>
                 </header>
-                <p class="timeline-note">First-class honours · Dissertation on the intersectionality of cultural factors influencing expatriation strategy in a tech start up</p>
+                <div class="collapsible-body">
+                  <p class="timeline-note">Dissertation on the intersectionality of cultural factors influencing expatriation strategy in a tech start-up</p>
+                  <div class="modules-wrap">
+                    <button class="modules-toggle" aria-expanded="false">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="6 9 12 15 18 9"/></svg>
+                      Modules studied
+                    </button>
+                    <ul class="modules-list collapsed">
+                      <li>HRM in Business Context</li>
+                      <li>Comparative Employment Relations</li>
+                      <li>Labour and Diversity in a Global Context</li>
+                      <li>Managing Human Resources in Multinationals</li>
+                      <li>Critical Issues in HRM</li>
+                      <li>Leading, Managing, and Developing People</li>
+                      <li>Global Innovation</li>
+                      <li>Business Skills</li>
+                      <li>Research Methods</li>
+                    </ul>
+                  </div>
+                </div>
               </article>
             </li>
-            
+
             <li class="timeline-item">
               <div class="timeline-dot" aria-hidden="true"></div>
               <article class="timeline-card">
@@ -447,45 +455,55 @@
             </button>
           </div>
 
-          <ul class="cert-list cert-list-collapsible" id="awardsList" aria-label="Awards" hidden>
-            
+          <ul class="cert-list cert-list-collapsible collapsed" id="awardsList" aria-label="Awards">
+
             <li class="cert-card">
-              <div class="cert-badge" aria-hidden="true">&#127942;</div>
+              <div class="cert-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="22" height="22"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
               <div class="cert-info">
                 <h3 class="cert-name">Exploring Entrepreneurship Challenge Winner</h3>
-                <p class="cert-meta">Strathclyde Inspire · Issued 2026 · No expiry</p>
-              </div>
-            </li>
-            
-            <li class="cert-card">
-              <div class="cert-badge" aria-hidden="true">&#127942;</div>
-              <div class="cert-info">
-                <h3 class="cert-name">Volunteering Award</h3>
-                <p class="cert-meta">University of Edinburgh · Issued 2023 </p>
+                <p class="cert-meta">Strathclyde Inspire · 2026</p>
               </div>
             </li>
 
             <li class="cert-card">
-              <div class="cert-badge" aria-hidden="true">&#127942;</div>
+              <div class="cert-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="22" height="22"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
               <div class="cert-info">
-                <h3 class="cert-name"> Top Performing Earth Dynamics Student</h3>
-                <p class="cert-meta"> University of Edinburgh · Issued July 5th 2023</p>
+                <h3 class="cert-name">Volunteering Award</h3>
+                <p class="cert-meta">University of Edinburgh · 2023</p>
               </div>
             </li>
-            
+
             <li class="cert-card">
-              <div class="cert-badge" aria-hidden="true">&#127942;</div>
+              <div class="cert-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="22" height="22"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
               <div class="cert-info">
-                <h3 class="cert-name"> Top Performing Introduction to Geological Record Student</h3>
-                <p class="cert-meta"> University of Edinburgh · Issued July 11th 2023</p>
+                <h3 class="cert-name">Top Performing Earth Dynamics Student</h3>
+                <p class="cert-meta">University of Edinburgh · July 2023</p>
               </div>
             </li>
-            
+
             <li class="cert-card">
-              <div class="cert-badge" aria-hidden="true">&#127942;</div>
+              <div class="cert-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="22" height="22"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <div class="cert-info">
+                <h3 class="cert-name">Top Performing Introduction to Geological Record Student</h3>
+                <p class="cert-meta">University of Edinburgh · July 2023</p>
+              </div>
+            </li>
+
+            <li class="cert-card">
+              <div class="cert-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="22" height="22"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
               <div class="cert-info">
                 <h3 class="cert-name">Edinburgh Award</h3>
-                <p class="cert-meta">University of Edinburgh · Issued 2022 </p>
+                <p class="cert-meta">University of Edinburgh · 2022</p>
               </div>
             </li>
 
@@ -498,62 +516,104 @@
     <!-- ── BOOKS ─────────────────────────────────────────────────── -->
     <section id="books" class="section section-alt">
       <div class="container">
-        <h2 class="section-title">Favourite Books</h2>
+        <h2 class="section-title">Recent Reads</h2>
         <p class="books-intro">A few books that have shaped how I think.</p>
-        <div class="books-grid">
+      </div>
+      <div class="books-shelf-wrap">
+        <div class="books-shelf">
 
-          <article class="book-card book-favourite">
-            <div class="book-spine" aria-hidden="true"></div>
-            <div class="book-content">
-              <div class="book-icon" aria-hidden="true">&#11088;</div>
-              <h3 class="book-title">Origin Story: A Big History of Everything</h3>
-              <p class="book-author">David Christian</p>
-              <span class="book-badge">All-time favourite</span>
+          <figure class="book-item book-favourite">
+            <div class="book-cover-wrap">
+              <img
+                class="book-cover"
+                src="https://covers.openlibrary.org/b/isbn/9780316392051-M.jpg"
+                alt="Origin Story cover"
+                loading="lazy"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+              />
+              <div class="book-cover-fallback" style="display:none">Origin Story</div>
             </div>
-          </article>
+            <figcaption class="book-caption">
+              <strong class="book-title-text">Origin Story</strong>
+              <span class="book-author-text">David Christian</span>
+              <span class="book-fave-tag">All-time favourite</span>
+            </figcaption>
+          </figure>
 
-          <article class="book-card">
-            <div class="book-spine" aria-hidden="true"></div>
-            <div class="book-content">
-              <div class="book-icon" aria-hidden="true">&#128218;</div>
-              <h3 class="book-title">Doughnut Economics</h3>
-              <p class="book-author">Kate Raworth</p>
+          <figure class="book-item">
+            <div class="book-cover-wrap">
+              <img
+                class="book-cover"
+                src="https://covers.openlibrary.org/b/isbn/9781603587969-M.jpg"
+                alt="Doughnut Economics cover"
+                loading="lazy"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+              />
+              <div class="book-cover-fallback" style="display:none">Doughnut Economics</div>
             </div>
-          </article>
+            <figcaption class="book-caption">
+              <strong class="book-title-text">Doughnut Economics</strong>
+              <span class="book-author-text">Kate Raworth</span>
+            </figcaption>
+          </figure>
 
-          <article class="book-card">
-            <div class="book-spine" aria-hidden="true"></div>
-            <div class="book-content">
-              <div class="book-icon" aria-hidden="true">&#128218;</div>
-              <h3 class="book-title">The Cold Start Problem</h3>
-              <p class="book-author">Andrew Chen</p>
+          <figure class="book-item">
+            <div class="book-cover-wrap">
+              <img
+                class="book-cover"
+                src="https://covers.openlibrary.org/b/isbn/9780062969743-M.jpg"
+                alt="The Cold Start Problem cover"
+                loading="lazy"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+              />
+              <div class="book-cover-fallback" style="display:none">The Cold Start Problem</div>
             </div>
-          </article>
+            <figcaption class="book-caption">
+              <strong class="book-title-text">The Cold Start Problem</strong>
+              <span class="book-author-text">Andrew Chen</span>
+            </figcaption>
+          </figure>
 
-          <article class="book-card">
-            <div class="book-spine" aria-hidden="true"></div>
-            <div class="book-content">
-              <div class="book-icon" aria-hidden="true">&#128218;</div>
-              <h3 class="book-title">What's Mine Is Yours</h3>
-              <p class="book-author">Rachel Botsman &amp; Roo Rogers</p>
+          <figure class="book-item">
+            <div class="book-cover-wrap">
+              <img
+                class="book-cover"
+                src="https://covers.openlibrary.org/b/isbn/9780061964749-M.jpg"
+                alt="What's Mine Is Yours cover"
+                loading="lazy"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+              />
+              <div class="book-cover-fallback" style="display:none">What's Mine Is Yours</div>
             </div>
-          </article>
+            <figcaption class="book-caption">
+              <strong class="book-title-text">What's Mine Is Yours</strong>
+              <span class="book-author-text">Botsman &amp; Rogers</span>
+            </figcaption>
+          </figure>
 
-          <article class="book-card">
-            <div class="book-spine" aria-hidden="true"></div>
-            <div class="book-content">
-              <div class="book-icon" aria-hidden="true">&#128218;</div>
-              <h3 class="book-title">The Art of Quiet Influence</h3>
-              <p class="book-author">Jocelyn Davis</p>
+          <figure class="book-item">
+            <div class="book-cover-wrap">
+              <img
+                class="book-cover"
+                src="https://covers.openlibrary.org/b/isbn/9781473695085-M.jpg"
+                alt="The Art of Quiet Influence cover"
+                loading="lazy"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+              />
+              <div class="book-cover-fallback" style="display:none">The Art of Quiet Influence</div>
             </div>
-          </article>
+            <figcaption class="book-caption">
+              <strong class="book-title-text">The Art of Quiet Influence</strong>
+              <span class="book-author-text">Jocelyn Davis</span>
+            </figcaption>
+          </figure>
 
         </div>
       </div>
     </section>
 
     <!-- ── CONTACT ──────────────────────────────────────────────── -->
-    <section id="contact" class="section section-alt">
+    <section id="contact" class="section">
       <div class="container contact-container">
         <h2 class="section-title">Get in Touch</h2>
         <p class="contact-intro">
@@ -563,7 +623,6 @@
 
         <div class="contact-grid">
 
-          <!-- Contact form -->
           <form class="contact-form" id="contactForm" novalidate>
             <div class="form-group">
               <label for="name">Name</label>
@@ -572,7 +631,7 @@
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="gvrlv1931@gmail.com" required />
+              <input type="email" id="email" name="email" placeholder="hello@example.com" required />
               <span class="form-error" aria-live="polite"></span>
             </div>
             <div class="form-group">
@@ -582,19 +641,11 @@
             </div>
             <button type="submit" class="btn btn-primary">Send Message</button>
             <p class="form-status" id="formStatus" aria-live="polite"></p>
-            <!--
-              NOTE: Wire up a backend or service like Formspree / EmailJS to
-              make the form actually send emails. See script.js for the hook.
-            -->
           </form>
 
-          <!-- Contact links -->
           <ul class="contact-links" aria-label="Contact links">
-            <!--
-              PERSONALISE: Replace href values and labels with your real profiles.
-            -->
             <li>
-              <a href="gvrlv1931@gmail.com" class="contact-link">
+              <a href="mailto:gvrlv1931@gmail.com" class="contact-link">
                 <span class="contact-link-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 </span>
@@ -611,7 +662,7 @@
                 </span>
                 <div>
                   <span class="contact-link-label">GitHub</span>
-                  <span class="contact-link-value">https://github.com/gvrlv1931-pixel</span>
+                  <span class="contact-link-value">github.com/gvrlv1931-pixel</span>
                 </div>
               </a>
             </li>
@@ -634,7 +685,6 @@
 
   </main>
 
-  <!-- ── FOOTER ───────────────────────────────────────────────── -->
   <footer class="footer">
     <div class="container footer-inner">
       <p>&copy; <span id="year"></span> Nastya Gavrilova. Built with plain HTML, CSS &amp; JS.</p>
