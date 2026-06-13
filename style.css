@@ -312,10 +312,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--s6);
-  align-items: stretch;
+  align-items: start;
 }
-
-.about-body { display: flex; flex-direction: column; justify-content: center; }
 
 .about-body p { color: var(--c-text-muted); font-size: 1.05rem; }
 .about-body p + p { margin-top: var(--s2); }
@@ -344,13 +342,12 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 .fact-value { font-weight: 600; text-align: right; color: var(--c-text); }
 
 /* ── Stats row ───────────────────────────────────────────────── */
+.about-side { display: flex; flex-direction: column; gap: var(--s4); }
+
 .stats-row {
   display: flex;
-  flex-wrap: nowrap;
-  gap: var(--s6);
-  margin-top: var(--s6);
-  padding-top: var(--s6);
-  border-top: 1px solid var(--c-border);
+  flex-wrap: wrap;
+  gap: var(--s3) var(--s4);
 }
 
 .stat-item {
