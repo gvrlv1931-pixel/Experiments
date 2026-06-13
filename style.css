@@ -660,8 +660,17 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 }
 .awards-header .section-title { margin-bottom: 0; }
 
-.cert-list { display: flex; flex-direction: column; gap: var(--s2); }
-.cert-list.collapsed { display: none; }
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+  overflow: hidden;
+  max-height: 2000px;
+  opacity: 1;
+  transition: max-height 0.55s ease, opacity 0.4s ease;
+}
+
+.cert-list.collapsed { max-height: 0; opacity: 0; }
 
 .cert-card {
   display: flex;
