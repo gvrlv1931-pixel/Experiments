@@ -85,6 +85,8 @@ function initReveal() {
     '.cert-card',
     '.about-facts',
     '.about-body',
+    '.book-card',
+    '.stat-item',
   ].join(', ');
 
   document.querySelectorAll(targets).forEach((el, i) => {
@@ -198,6 +200,82 @@ contactForm.querySelectorAll('input, textarea').forEach(el => {
     formStatus.textContent = '';
     formStatus.className = 'form-status';
   });
+});
+
+/* ─── Bio expand/collapse ─────────────────────────────────────── */
+const bioToggle = document.querySelector('.bio-toggle');
+const bioParagraph = document.getElementById('bioParagraph');
+
+if (bioToggle && bioParagraph) {
+  bioToggle.addEventListener('click', () => {
+    const expanded = bioToggle.getAttribute('aria-expanded') === 'true';
+    bioToggle.setAttribute('aria-expanded', String(!expanded));
+    if (expanded) {
+      bioParagraph.hidden = true;
+      bioToggle.textContent = 'A bit more about me \u{2964}';
+    } else {
+      bioParagraph.hidden = false;
+      bioToggle.textContent = 'Close \u{2963}';
+    }
+  });
+}
+
+/* ─── Collapsible timeline cards ─────────────────────────────── */
+document.querySelectorAll('.timeline-header-toggle').forEach(header => {
+  function toggleCard() {
+    const card = header.closest('.timeline-card');
+    const body = card.querySelector('.collapsible-body');
+    const expanded = header.getAttribute('aria-expanded') === 'true';
+    header.setAttribute('aria-expanded', String(!expanded));
+    card.classList.toggle('card-collapsed', expanded);
+    body.classList.toggle('collapsed', expanded);
+  }
+
+  header.addEventListener('click', toggleCard);
+  header.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleCard(); }
+  });
+});
+
+/* ─── Awards toggle ───────────────────────────────────────────── */
+const awardsToggle = document.querySelector('.awards-toggle');
+const awardsList   = document.getElementById('awardsList');
+
+if (awardsToggle && awardsList) {
+  awardsToggle.addEventListener('click', () => {
+    const expanded = awardsToggle.getAttribute('aria-expanded') === 'true';
+    awardsToggle.setAttribute('aria-expanded', String(!expanded));
+    awardsList.hidden = expanded;
+    awardsToggle.textContent = expanded ? 'Show Awards' : 'Hide Awards';
+  });
+}
+
+/* ─── Animated stat counters ──────────────────────────────────── */
+function animateCounter(el, target, duration = 1200) {
+  const start = performance.now();
+  function step(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.round(eased * target);
+    if (progress < 1) requestAnimationFrame(step);
+    else el.textContent = target;
+  }
+  requestAnimationFrame(step);
+}
+
+const statsObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const target = parseInt(el.dataset.target, 10);
+      animateCounter(el, target);
+      statsObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.stat-number[data-target]').forEach(el => {
+  statsObserver.observe(el);
 });
 
 /* ─── Active nav link on scroll ──────────────────────────────── */
