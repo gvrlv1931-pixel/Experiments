@@ -147,7 +147,6 @@ function initReveal() {
     '.cert-card',
     '.about-facts',
     '.about-body',
-    '.book-item',
   ].join(', ');
 
   document.querySelectorAll(targets).forEach((el, i) => {

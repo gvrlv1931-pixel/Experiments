@@ -410,10 +410,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 /* ─── Stats row ───────────────────────────────────────────────── */
 .stats-row {
-  display: flex;
-  gap: var(--s4);
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: start;
+  gap: var(--s3);
   margin-top: var(--s4);
-  flex-wrap: wrap;
 }
 
 .stat-item {
@@ -1068,7 +1069,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .projects-grid  { grid-template-columns: 1fr; }
   .skills-grid    { grid-template-columns: 1fr 1fr; }
   .footer-inner   { flex-direction: column; gap: var(--s2); text-align: center; }
-  .stats-row      { gap: var(--s3); }
+  .stats-row      { grid-template-columns: repeat(2, auto); gap: var(--s3); }
 }
 
 @media (prefers-reduced-motion: reduce) {
