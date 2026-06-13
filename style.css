@@ -464,8 +464,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   justify-content: space-between;
   align-items: flex-start;
   gap: var(--s2);
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
+
+.timeline-header > div:first-child { flex: 1; min-width: 0; }
 
 .timeline-header-right {
   display: flex;
