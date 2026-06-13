@@ -1,5 +1,9 @@
 'use strict';
 
+/* ── Scroll to top on load ───────────────────────────────────── */
+if (history.scrollRestoration) history.scrollRestoration = 'manual';
+window.scrollTo(0, 0);
+
 /* ── Sticky nav ──────────────────────────────────────────────── */
 const navHeader = document.querySelector('.nav-header');
 window.addEventListener('scroll', () => {
