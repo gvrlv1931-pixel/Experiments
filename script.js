@@ -31,7 +31,7 @@ navLinks.querySelectorAll('a').forEach(a => {
 
 /* ── Hero role typewriter ────────────────────────────────────── */
 const roles = [
-  'Systems Designer',
+  'Holistic Systems Designer',
   'Social Entrepreneur',
   'Circular Economy Builder',
   'Problem Solver',
