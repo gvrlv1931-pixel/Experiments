@@ -208,7 +208,7 @@ if (contactForm && formStatus) {
         method: 'POST',
         headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          access_key: 'YOUR_WEB3FORMS_ACCESS_KEY',
+          access_key: '2b1085ef-46c2-4ffc-9797-2885e2bf7b3f',
           name:    document.getElementById('name').value,
           email:   document.getElementById('email').value,
           message: document.getElementById('message').value,
