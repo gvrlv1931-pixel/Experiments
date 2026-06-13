@@ -621,6 +621,23 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 
 .projects-toggle-wrap { text-align: center; margin-top: var(--s4); }
 
+.project-links-list { display: flex; flex-direction: column; gap: 0.4rem; margin-top: 0.35rem; }
+
+.project-press-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--c-accent);
+  transition: opacity var(--transition);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(108,99,255,0.4);
+}
+
+.project-press-link:hover { opacity: 0.75; }
+
 /* Project expand button */
 .project-expand-btn {
   display: inline-flex;
