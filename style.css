@@ -125,13 +125,13 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 .achievement-list { display: flex; flex-wrap: wrap; gap: var(--s1); }
 
 .achievement {
-  background: rgba(108,99,255,0.15);
-  color: #a8a0ff;
+  background: rgba(168,85,247,0.12);
+  color: #d8b4fe;
   font-size: 0.78rem;
   font-weight: 500;
   padding: 0.2rem 0.65rem;
   border-radius: 999px;
-  border: 1px solid rgba(108,99,255,0.3);
+  border: 1px solid rgba(168,85,247,0.28);
 }
 
 /* ── Nav ─────────────────────────────────────────────────────── */
