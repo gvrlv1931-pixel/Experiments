@@ -35,7 +35,7 @@ const roles = [
   'Environmental Systems Innovator',
   'Circular Economy Builder',
   'Problem Solver',
-  'Peole and Planet Professional',
+  'People and Planet Professional',
 ];
 
 const roleCycle = document.getElementById('roleCycle');
