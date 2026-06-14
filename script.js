@@ -31,10 +31,11 @@ navLinks.querySelectorAll('a').forEach(a => {
 
 /* ── Hero role typewriter ────────────────────────────────────── */
 const roles = [
-  'Holistic Systems Designer',
   'Social Entrepreneur',
+  'Environmental Systems Innovator',
   'Circular Economy Builder',
   'Problem Solver',
+  'Peole and Planet Professional',
 ];
 
 const roleCycle = document.getElementById('roleCycle');
