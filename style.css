@@ -665,7 +665,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 
 .itr-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-flow: column dense;
   gap: var(--s3);
   margin-top: var(--s4);
 }
@@ -775,40 +776,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
   animation: pulse-ring 1.4s ease-out infinite;
 }
 
-.itr-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-top: var(--s3);
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.35s ease, opacity 0.3s ease, margin-top 0.3s ease;
-}
-
-.itr-card:hover .itr-tags,
-.itr-card:focus-within .itr-tags {
-  max-height: 100px;
-  opacity: 1;
-}
-
-.itr-tags li {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--c-text);
-  border: 1.5px solid var(--c-text);
-  border-radius: var(--radius-sm);
-  padding: 0.15rem 0.5rem;
-  transition: background var(--transition), color var(--transition);
-}
-
-.itr-tags li:hover {
-  background: var(--c-text);
-  color: var(--c-accent);
-}
 
 .itr-accent {
   position: absolute;
