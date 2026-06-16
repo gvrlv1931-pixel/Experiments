@@ -137,7 +137,7 @@ const revealObs = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.timeline-card, .project-card, .skill-group, .cert-card, .about-facts, .about-body').forEach((el, i) => {
+document.querySelectorAll('.timeline-card, .project-card, .skill-group, .cert-card, .itr-card, .about-facts, .about-body').forEach((el, i) => {
   el.classList.add('reveal');
   el.style.transitionDelay = (i % 4) * 55 + 'ms';
   revealObs.observe(el);
