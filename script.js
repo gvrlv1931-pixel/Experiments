@@ -75,8 +75,8 @@ document.querySelectorAll('.project-expand-btn').forEach(btn => {
   if (details) bindToggle(btn, details);
 });
 
-/* ── Modules toggle (Education) ──────────────────────────────── */
-document.querySelectorAll('.modules-toggle').forEach(btn => {
+/* ── Generic next-sibling collapse (modules, year blocks) ───── */
+document.querySelectorAll('.modules-toggle, .year-toggle').forEach(btn => {
   const target = btn.nextElementSibling;
   if (!target) return;
   btn.addEventListener('click', () => {
@@ -86,52 +86,19 @@ document.querySelectorAll('.modules-toggle').forEach(btn => {
   });
 });
 
-/* ── Year toggles (Education - Edinburgh) ────────────────────── */
-document.querySelectorAll('.year-toggle').forEach(btn => {
-  const list = btn.nextElementSibling;
-  if (!list) return;
+/* ── Show/Hide toggles (awards, books) ──────────────────────── */
+function bindShowHide(toggleSel, targetId) {
+  const btn = document.querySelector(toggleSel);
+  const el  = document.getElementById(targetId);
+  if (!btn || !el) return;
   btn.addEventListener('click', () => {
-    const collapsed = list.classList.toggle('collapsed');
+    const collapsed = el.classList.toggle('collapsed');
     btn.setAttribute('aria-expanded', String(!collapsed));
-    btn.classList.toggle('open', !collapsed);
-  });
-});
-
-/* ── Awards toggle ───────────────────────────────────────────── */
-const awardsToggle = document.querySelector('.awards-toggle');
-const awardsList   = document.getElementById('awardsList');
-
-if (awardsToggle && awardsList) {
-  awardsToggle.addEventListener('click', () => {
-    const collapsed = awardsList.classList.toggle('collapsed');
-    awardsToggle.setAttribute('aria-expanded', String(!collapsed));
-    awardsToggle.textContent = collapsed ? 'Show' : 'Hide';
+    btn.textContent = collapsed ? 'Show' : 'Hide';
   });
 }
-
-/* ── Ambassadors toggle ──────────────────────────────────────── */
-const ambassadorsToggle = document.querySelector('.ambassadors-toggle');
-const ambassadorsList   = document.getElementById('ambassadorsList');
-
-if (ambassadorsToggle && ambassadorsList) {
-  ambassadorsToggle.addEventListener('click', () => {
-    const collapsed = ambassadorsList.classList.toggle('collapsed');
-    ambassadorsToggle.setAttribute('aria-expanded', String(!collapsed));
-    ambassadorsToggle.textContent = collapsed ? 'Show' : 'Hide';
-  });
-}
-
-/* ── Books toggle ────────────────────────────────────────────── */
-const booksToggle  = document.querySelector('.books-toggle');
-const booksContent = document.getElementById('booksContent');
-
-if (booksToggle && booksContent) {
-  booksToggle.addEventListener('click', () => {
-    const collapsed = booksContent.classList.toggle('collapsed');
-    booksToggle.setAttribute('aria-expanded', String(!collapsed));
-    booksToggle.textContent = collapsed ? 'Show' : 'Hide';
-  });
-}
+bindShowHide('.awards-toggle', 'awardsList');
+bindShowHide('.books-toggle',  'booksContent');
 
 /* ── Book shelf marquee (seamless duplicate) ─────────────────── */
 const booksShelf = document.getElementById('booksShelf');
