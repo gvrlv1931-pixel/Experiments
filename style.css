@@ -1051,7 +1051,16 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 
 .contact-grid { display: grid; grid-template-columns: 1fr auto; gap: var(--s6); align-items: start; }
 
-.contact-form { display: flex; flex-direction: column; gap: var(--s3); }
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s3);
+  background: var(--c-surface);
+  border: 2px solid var(--c-text);
+  border-radius: var(--radius);
+  padding: var(--s4);
+  box-shadow: 6px 6px 0 var(--c-accent);
+}
 
 .form-group { display: flex; flex-direction: column; gap: 6px; }
 
@@ -1064,8 +1073,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 
 .form-group input,
 .form-group textarea {
-  background: var(--c-bg-alt);
-  border: 2px solid var(--c-border);
+  background: var(--c-bg);
+  border: 1.5px solid var(--c-border);
   border-radius: var(--radius-sm);
   padding: 0.65rem 0.9rem;
   color: var(--c-text);
