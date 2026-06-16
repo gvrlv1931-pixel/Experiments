@@ -375,9 +375,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 
 .stats-row {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: var(--s3);
 }
+
+.stat-item { min-width: 70px; }
 
 .stat-item {
   display: flex;
@@ -554,7 +556,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 /* Collapsible body */
 .collapsible-body {
   overflow: hidden;
-  max-height: 1200px;
+  max-height: 3000px;
   opacity: 1;
   transition: max-height 0.45s ease, opacity 0.3s ease, margin-top 0.3s ease;
   margin-top: var(--s2);
@@ -598,6 +600,43 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 .modules-toggle svg { transition: transform 0.3s ease; }
 .modules-toggle.open svg { transform: rotate(-180deg); }
 
+.modules-years {
+  overflow: hidden;
+  max-height: 2000px;
+  opacity: 1;
+  margin-top: var(--s2);
+  transition: max-height 0.5s ease, opacity 0.3s ease, margin-top 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+}
+
+.modules-years.collapsed { max-height: 0; opacity: 0; margin-top: 0; }
+
+.modules-year-block {
+  border-left: 2px solid var(--c-border);
+  padding-left: var(--s2);
+}
+
+.year-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--c-text);
+  cursor: pointer;
+  padding: 0;
+  transition: color var(--transition);
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.year-toggle:hover { color: var(--c-text-muted); }
+.year-toggle svg { transition: transform 0.3s ease; flex-shrink: 0; }
+.year-toggle.open svg { transform: rotate(-180deg); }
+
 .modules-list {
   list-style: disc;
   padding-inline-start: 1.2em;
@@ -614,6 +653,19 @@ button { cursor: pointer; border: none; background: none; font: inherit; color: 
 }
 
 .modules-list.collapsed { max-height: 0; opacity: 0; margin-top: 0; }
+
+.modules-list li { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+
+.grade-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--c-accent);
+  background: var(--c-text);
+  padding: 0.1rem 0.4rem;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
 
 /* ── Projects ────────────────────────────────────────────────── */
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: var(--s3); }

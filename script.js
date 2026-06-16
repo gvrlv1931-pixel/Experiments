@@ -77,6 +77,17 @@ document.querySelectorAll('.project-expand-btn').forEach(btn => {
 
 /* ── Modules toggle (Education) ──────────────────────────────── */
 document.querySelectorAll('.modules-toggle').forEach(btn => {
+  const target = btn.nextElementSibling;
+  if (!target) return;
+  btn.addEventListener('click', () => {
+    const collapsed = target.classList.toggle('collapsed');
+    btn.setAttribute('aria-expanded', String(!collapsed));
+    btn.classList.toggle('open', !collapsed);
+  });
+});
+
+/* ── Year toggles (Education - Edinburgh) ────────────────────── */
+document.querySelectorAll('.year-toggle').forEach(btn => {
   const list = btn.nextElementSibling;
   if (!list) return;
   btn.addEventListener('click', () => {
@@ -95,6 +106,18 @@ if (awardsToggle && awardsList) {
     const collapsed = awardsList.classList.toggle('collapsed');
     awardsToggle.setAttribute('aria-expanded', String(!collapsed));
     awardsToggle.textContent = collapsed ? 'Show' : 'Hide';
+  });
+}
+
+/* ── Ambassadors toggle ──────────────────────────────────────── */
+const ambassadorsToggle = document.querySelector('.ambassadors-toggle');
+const ambassadorsList   = document.getElementById('ambassadorsList');
+
+if (ambassadorsToggle && ambassadorsList) {
+  ambassadorsToggle.addEventListener('click', () => {
+    const collapsed = ambassadorsList.classList.toggle('collapsed');
+    ambassadorsToggle.setAttribute('aria-expanded', String(!collapsed));
+    ambassadorsToggle.textContent = collapsed ? 'Show' : 'Hide';
   });
 }
 
